@@ -10,15 +10,23 @@ commands:
                 unzip awscliv2.zip
                 sudo ./aws/install
     install_ansibile:
-      description: INSTALL Ansibile V2
+      description: INSTALL Ansibile 
       steps: 
         - run:
-            name: INSTALL Ansibile V2
+            name: Install Ansibile 
             command: |
                 sudo apt update
                 sudo apt install software-properties-common
                 sudo add-apt-repository --yes --update ppa:ansible/ansible
-                sudo apt install ansible
+                sudo apt install ansible -y
+    install_node.js:
+      description: Install Node.js 13
+      steps: 
+        - run:
+            name: Install Node.js 13
+            command: |
+                curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash - 
+                sudo apt install -y nodejs
     destroy-environment:
       description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
       parameters:
@@ -50,8 +58,7 @@ commands:
                   cd ~/project/backend
                   npm install
                   npm run migration:revert
-                fi
-            
+                fi        
 jobs:
   build-frontend:
     docker:

@@ -4,7 +4,7 @@
     state: directory
 - name: "Unarchive Backend files"
   unarchive:
-    src: artifact.tar.gaz
+    src: artifact.tar.gz
     dest: ~/backend-app
 
 - name: "Installing Node Dependincies"

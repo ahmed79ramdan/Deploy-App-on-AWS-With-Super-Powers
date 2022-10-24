@@ -19,7 +19,7 @@ commands:
                 sudo apt install software-properties-common
                 sudo add-apt-repository --yes --update ppa:ansible/ansible
                 sudo apt install ansible -y
-    install_node.js:
+    install_nodejs:
       description: Install Node.js 13
       steps: 
         - run:
@@ -294,9 +294,9 @@ jobs:
           command: |
             cd backend 
             npm run build 
-            tar -czf artifact.tar.gaz dist/* package*
+            tar -czf artifact.tar.gz dist/* package*
             cd ..
-            cp backend/artifact.tar.gaz .circleci/ansible/roles/deploy/files
+            cp backend/artifact.tar.gz .circleci/ansible/roles/deploy/files
       
       - run:
           name: Deploy backend

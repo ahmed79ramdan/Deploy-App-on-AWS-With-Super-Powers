@@ -5,7 +5,7 @@
   remote_user: ubuntu
   become: true
   become_method: sudo
-  become_user: root
+  become_user: root  
   gather_facts: false
   vars:
     ansible_python_interpreter: /usr/bin/python3
@@ -13,15 +13,15 @@
     ansible_stdout_callback: yaml
     
   environment:
-    MODE_ENV: production
+    NODE_ENV: production
     VERSION: "1"
     TYPEORM_CONNECTION: "{{ lookup('env', 'TYPEORM_CONNECTION') }}"
-    TYPEORM_MIGRATION_DIR: "{{ lookup('env', 'TYPEORM_MIGRATION_DIR') }}"
+    TYPEORM_MIGRATIONS_DIR: "{{ lookup('env', 'TYPEORM_MIGRATIONS_DIR') }}"
     TYPEORM_ENTITIES: "{{ lookup('env', 'TYPEORM_ENTITIES') }}"
-    TYPEORM_MIGRATION: "{{ lookup('env', 'TYPEORM_MIGRATION') }}"
+    TYPEORM_MIGRATIONS: "{{ lookup('env', 'TYPEORM_MIGRATIONS') }}"
     TYPEORM_HOST: "{{ lookup('env', 'TYPEORM_HOST') }}"
     TYPEORM_PORT: "{{ lookup('env', 'TYPEORM_PORT') }}"
-    TYPEORM_USERNAME: "{{ lookup('env', 'TYPEORM_USENAME') }}"
+    TYPEORM_USERNAME: "{{ lookup('env', 'TYPEORM_USERNAME') }}"
     TYPEORM_PASSWORD: "{{ lookup('env', 'TYPEORM_PASSWORD') }}"
     TYPEORM_DATABASE: "{{ lookup('env', 'TYPEORM_DATABASE') }}"
 
@@ -34,8 +34,8 @@
       become: true
       raw: test -e /usr/bin/python3 || (apt -y update && apt install -y python3)
       changed_when: false
-      
-
+    
+    - setup:
 
   roles:
     - deploy

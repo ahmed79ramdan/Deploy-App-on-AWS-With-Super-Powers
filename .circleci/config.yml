@@ -224,10 +224,10 @@ jobs:
           command: |
             cd backend
             npm install
-            npm audit fix --force --audit-level=critical
-            npm audit --audit-level=critical
-            npm install --save-dev webpack@5.74.0
-            npm audit fix
+            # npm audit fix --force --audit-level=critical
+            # npm audit --audit-level=critical
+            # npm install --save-dev webpack@5.74.0
+            # npm audit fix
             npm run migrations > migrations_dump.txt
             
       - run:

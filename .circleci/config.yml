@@ -226,9 +226,7 @@ jobs:
             npm install
             npm audit fix
             npm audit fix
-            npm audit fix --force
-            npm audit fix --force
-            npm audit fix --force
+            npm audit fix 
             
             npm run migrations > migrations_dump.txt
       - run:

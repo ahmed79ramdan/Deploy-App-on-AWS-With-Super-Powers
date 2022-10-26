@@ -227,7 +227,7 @@ jobs:
             npm cache clean --force
             npm cache verify
             npm install
-           
+            npm audit fix
             npm run migrations > migrations_dump.txt
             
       - run:

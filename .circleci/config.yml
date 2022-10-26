@@ -223,11 +223,11 @@ jobs:
           name: Run migrations
           command: |
             cd backend
+            rm -rf package-lock.json npm-shrinkwrap.json node_modules
+            npm cache clean --force
+            npm cache verify
             npm install
-            # npm audit fix --force --audit-level=critical
-            # npm audit --audit-level=critical
-            # npm install --save-dev webpack@5.74.0
-            # npm audit fix
+           
             npm run migrations > migrations_dump.txt
             
       - run:

@@ -225,9 +225,7 @@ jobs:
             cd backend
            
             npm install
-            npm audit fix
-            npm audit fix --force
-            npm install tsc
+            
             npm run migrations > migrations_dump.txt
             
       - run:

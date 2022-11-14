@@ -218,6 +218,7 @@ jobs:
             cd backend
             npm install
             npm audit fix --force --audit-level=critical
+            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
             npm i migrations
             npm run migrations > migrations_dump.txt

@@ -2,10 +2,10 @@
 
 For your submission, please submit the following:
 
-A text file named urls.txt including:
 ________________________________________________________________
 
 ### URL:
+A text file named urls.txt including:
 Public Url to GitHub repository (not private) [URL01]
 
 Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]

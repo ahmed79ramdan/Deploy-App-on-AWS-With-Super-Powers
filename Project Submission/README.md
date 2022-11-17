@@ -1,4 +1,4 @@
-Project Submission
+### Project Submission ###
 
 For your submission, please submit the following:
 
@@ -11,8 +11,9 @@ Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]
 Note: The services should be up and running while the reviewer evaluates your project. If you use Udacity provided AWS account, the EC2 instance will shut down (not terminate) automatically after the session ends at every 4 hours. 
 
 Therefore, you can consider rerunning the CircleCI pipeline just before the submission for provisioning the new AWS resources and provide the working URL02.
+==========================================================================
 
-Your screenshots in JPG or PNG format, named using the screenshot number listed in the instructions. These screenshots should be included in your code repository in the root folder.
+### Your screenshots in JPG or PNG format, named using the screenshot number listed in the instructions. These screenshots should be included in your code repository in the root folder.
 
 Job failed because of compile errors. [SCREENSHOT01]
 
@@ -43,5 +44,6 @@ Provide a screenshot showing the evidence of deployed and functioning front-end 
 Provide a screenshot showing the evidence of a healthy backend application. The backend endpoint status should show a healthy response. [URL04_SCREENSHOT]
 
 Provide a screenshot of your Prometheus server showing UP state [URL05_SCREENSHOT]
+==========================================================================
 
-Your presentation should be in PDF format named "presentation.pdf" and should be included in your code repository root folder.
+### Your presentation should be in PDF format named "presentation.pdf" and should be included in your code repository root folder.

@@ -1,6 +1,6 @@
 ### Project Submission ###
 
-For your submission, please submit the following:
+For your submission, please submit the following
 
 ________________________________________________________________
 
